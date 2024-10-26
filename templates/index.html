@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Website</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    {% include 'header.html' %}
+    <main>
+        <div class="search-container mb-4" style="max-width: 600px; margin: auto; padding: 10px;">
+            <form action="" class="d-flex">
+                <input type="text" class="form-control me-2" name="search_input" placeholder="Search..." aria-label="Search">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+        
+        <div class="container mt-4">
+            <div class="row">
+                {% for pizza in pizzas %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        {% if pizza.pizza_picture %}
+                            <img src="{{ pizza.pizza_picture.url }}" class="card-img-top" alt="{{ pizza.name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h3 class="card-title"><b>{{ pizza.name }}</b></h3>
+                            <p class="card-text">{{ pizza.description }}</p>
+                            <p class="card-text"><strong>Size:</strong> {{ pizza.size }}</p>
+                            <p class="card-text"><strong>Type:</strong> {{ pizza.type }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12">
+                    <p class="text-center">No pizzas available at the moment.</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    {% include 'footer.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

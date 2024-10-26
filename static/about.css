@@ -1,0 +1,100 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/bg_4.jpg');
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px;
+    background-image: url('/static/bg_4.jpg');
+}
+
+.about-container {
+    max-width: 800px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-container h1, .about-container h2 {
+    color: #e74c3c;
+}
+
+.about-container p, .about-container ul {
+    color: #ffff;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-container ul {
+    list-style-type: disc;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.about-container ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #ffdd57;
+}

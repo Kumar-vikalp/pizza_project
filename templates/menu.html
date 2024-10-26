@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'menu.css' %}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <main>
+        <div class="container">
+            <div class="card card0">
+                <div class="border">
+                    <div class="card h-100">
+                        <h2><b>Veg Pizza</b></h2>
+                        <img src="https://b.zmtcdn.com/data/pictures/1/19124641/bedddb08e3eafa541fdec9db26613993.jpg" class="card-img-top" alt="Veg Pizza">
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text">A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier.</p>
+                            <div class="filter-buttons">
+                                <button class="filter-button" onclick="filterPizzas('veg')">Veg</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://cdn.pixabay.com/photo/2023/03/20/04/09/pizza-7863713_960_720.jpg" class="card-img-top" alt="Non-Veg Pizza">
+                        <div class="card-body">
+                            <h3 class="card-title"><b>Non-Veg Pizza</b></h3>
+                            <p class="card-text">Choose your favourite non-veg pizzas from the Domino's Pizza menu. Get fresh non-veg pizza with your choice of crusts & toppings.</p>
+                            <div class="filter-buttons">
+                                <button class="filter-button" onclick="filterPizzas('non-veg')">Non Veg</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://cdn.pixabay.com/photo/2024/04/23/09/32/ai-generated-8714508_1280.jpg" class="card-img-top" alt="Vegan Pizza">
+                        <div class="card-body">
+                            <h3 class="card-title"><b>Vegan Pizza</b></h3>
+                            <p class="card-text">Indulge into mouth-watering taste of Vegan Pizza range, perfect answer to all your food cravings.</p>
+                            <div class="filter-buttons">
+                                <button class="filter-button" onclick="filterPizzas('vegan')">Vegan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="container mt-4">
+            <div class="row" id="pizza-container">
+                {% for pizza in pizzas %}
+                <div class="col-md-4 mb-4 pizza-card" data-type="{{ pizza.type }}">
+                    <div class="card h-100">
+                        {% if pizza.pizza_picture %}
+                            <img src="{{ pizza.pizza_picture.url }}" class="card-img-top" alt="{{ pizza.name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h3 class="card-title"><b>{{ pizza.name }}</b></h3>
+                            <p class="card-text">{{ pizza.description }}</p>
+                            <p class="card-text"><strong>Size:</strong> {{ pizza.size }}</p>
+                            <p class="card-text"><strong>Type:</strong> {{ pizza.type }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12">
+                    <p class="text-center">No pizzas available at the moment.</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div> -->
+    </main>    
+    {% include 'footer.html' %}
+    <!-- <script>
+        function filterPizzas(type) {
+            const pizzas = document.querySelectorAll('.pizza-card');
+
+            pizzas.forEach(pizza => {
+                if (type === 'all' || pizza.getAttribute('data-type') === type) {
+                    pizza.style.display = 'block';
+                } else {
+                    pizza.style.display = 'none';
+                }
+            });
+        }
+    </script> -->
+</body>
+</html>

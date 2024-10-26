@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Pizza Paradise</title>
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    <section class="about-section">
+        <div class="about-container">
+            <h1>About Pizza Paradise</h1>
+            <p>Welcome to Pizza Paradise, where passion meets flavor! Our story began with a simple love for great pizza and a dream to share that love with the world. We believe pizza isn’t just food – it's an experience, one that brings people together, and sparks joy with every slice.</p>
+            
+            <p>Our chefs craft every pizza with the finest ingredients, from hand-kneaded dough to fresh, locally sourced toppings. Whether you're a fan of classic Margherita, a pepperoni lover, or adventurous enough to try our gourmet specials, we have something to satisfy every pizza craving.</p>
+            
+            <p>Founded in 2020, Pizza Paradise is more than just a restaurant – it's a community. From family dinners to special celebrations, we aim to make every meal memorable. Thank you for being part of our journey, and we look forward to serving you the best pizza in town!</p>
+            
+            <h2>Our Mission</h2>
+            <p>Our mission is simple: to create unforgettable pizza experiences by using high-quality ingredients, innovative recipes, and delivering exceptional customer service. We’re committed to making each meal one you’ll remember!</p>
+            
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Handmade dough, baked to perfection.</li>
+                <li>Fresh, locally sourced ingredients.</li>
+                <li>Friendly service and a cozy atmosphere.</li>
+                <li>A wide variety of pizzas to cater to every taste.</li>
+                <li>Family-owned and community-focused.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pizza Paradise. All rights reserved.</p>
+        <ul>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
